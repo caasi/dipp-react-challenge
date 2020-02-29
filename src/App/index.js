@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './index.module.scss';
 import {
   BrowserRouter as Router,
   Link,
@@ -12,7 +13,7 @@ import Task2Page from '../components/Task2Page';
 function App({ id }) {
   return (
     <Router basename="/">
-      <div id={id}>
+      <div id={id} className={styles.className}>
         <nav>
           <ul>
             <li>
