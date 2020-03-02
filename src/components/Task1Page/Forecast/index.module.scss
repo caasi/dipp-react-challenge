@@ -1,6 +1,25 @@
 .className {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
+  .daily,
+  .hourly {
+    list-style: none;
+    padding: 0;
+  }
+
+  .daily {
+    display: flex;
+    flex-direction: row;
+
+    li + li {
+      margin-left: 12px;
+    }
+  }
+
+  .hourly {
+    display: flex;
+    flex-direction: column;
+
+    .item{
+      border-bottom: 1px solid #e9e9e9;
+    }
+  }
 }
