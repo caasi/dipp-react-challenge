@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "036f784d702c0b017abcbb60f39edb08",
+    "revision": "9df71c3db096c0caf905f7e0560ffc8b",
     "url": "/dipp-react-challenge/index.html"
   },
   {
-    "revision": "7d2ea6654098d96a2dcc",
+    "revision": "0ccab6e416c201f40c89",
     "url": "/dipp-react-challenge/static/css/main.922feb47.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dipp-react-challenge/static/js/2.16b06220.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7d2ea6654098d96a2dcc",
-    "url": "/dipp-react-challenge/static/js/main.9a1c64f2.chunk.js"
+    "revision": "0ccab6e416c201f40c89",
+    "url": "/dipp-react-challenge/static/js/main.ef31746f.chunk.js"
   },
   {
     "revision": "bafcde5028ef61649cb7",
