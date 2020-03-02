@@ -1,0 +1,34 @@
+.className {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+  .username,
+  .password {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+
+    label,
+    input {
+      display: block;
+    }
+
+    label {
+      width: 100px;
+      text-align: right;
+    }
+
+    label + input {
+      margin-left: 12px;
+      border: none;
+      border-bottom: 1px solid #bababa;
+      outline: none;
+    }
+  }
+
+  button[type="submit"] {
+    width: 6em;
+    margin-left: 112px;
+  }
+}
