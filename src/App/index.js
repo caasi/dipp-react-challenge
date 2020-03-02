@@ -12,7 +12,7 @@ import Task2Page from '../components/Task2Page';
 
 function App({ id }) {
   return (
-    <Router basename="/">
+    <Router basename="dipp-react-challenge">
       <div id={id} className={styles.className}>
         <nav>
           <ul>
