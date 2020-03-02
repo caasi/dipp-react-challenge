@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss';
 import { ad, images } from './metadata.json';
-import { Stage, Layer, Image, Text } from 'react-konva';
-import useImage from 'use-image';
+import { Stage, Layer, Text } from 'react-konva';
+import Background from './Background';
+import Logo from './Logo';
 
 export default function Task2Page({ id }) {
   const [dataURL, setDataURL] = useState('');
   const [width, height] = ad.dimensions;
-  const [image] = useImage(images[ad.img_hash].resource, 'anonymous');
-  const [logo] = useImage(ad.logo.logo_resource, 'anonymous');
-  const { x: logoX, y: logoY } = ad.logo.box.coordinates;
-  const { copys } = ad;
+  const { img_hash, copys } = ad;
+  const image = images[img_hash];
 
   return (
     <div id={id} className={styles.className}>
@@ -22,21 +21,18 @@ export default function Task2Page({ id }) {
         height={height}
         ref={(stage) => {
           if (!stage) return;
-          stage.toDataURL({
-            mimeType: 'image/jpeg',
-            callback: (data) => setDataURL(data),
-          });
+          // wait until children have been rendered
+          setTimeout(() => {
+            stage.toDataURL({
+              mimeType: 'image/jpeg',
+              callback: (data) => setDataURL(data),
+            });
+          }, 100);
         }}
       >
         <Layer>
-          <Image image={image} />
-          <Image
-            image={logo}
-            x={logoX}
-            y={logoY}
-            shadowColor="#333"
-            shadowBlur={20}
-          />
+          <Background src={image.resource} />
+          <Logo {...ad.logo} />
           {copys.map((copy, i) => copy.splits.map((part, j) =>
             <Text
               key={`${i},${j}`}
