@@ -6,7 +6,6 @@ const WeatherItem = React.memo(({ id, className, data = {} }) => {
   const { main: { temp_max, temp_min } = {}, weather = [] } = data;
   const max_temp = Math.floor(temp_max);
   const min_temp = Math.floor(temp_min);
-  console.log(data);
 
   return (
     <div id={id} className={cx(styles.className, className)}>

@@ -22,8 +22,8 @@ export function list() {
 
 export function create(city) {
   const cities = [
-    ...store.get('cities'),
     city,
+    ...store.get('cities'),
   ];
 
   store.set('cities', cities);
@@ -35,7 +35,7 @@ export function create(city) {
 
 export function remove(city) {
   let cities = store.get('cities');
-  const i = cities.findIndex(city);
+  const i = cities.findIndex((c) => c === city);
 
   if (i !== -1) {
     cities = [
