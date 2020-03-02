@@ -1,4 +1,19 @@
 .className {
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-left: 12px;
+      }
+    }
+
+    border-bottom: 1px solid #bababa;
+  }
+
   main {
     display: flex;
     flex-direction: column;
