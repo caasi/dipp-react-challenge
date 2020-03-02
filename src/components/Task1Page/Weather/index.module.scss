@@ -1,0 +1,40 @@
+.className {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 60px;
+  padding: 8px 12px 4px 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  .day {
+    color: #bababa;
+    text-align: center;
+  }
+
+  .icon {
+    text-align: center;
+  }
+
+  .temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .max {
+      color: #8a8a8a;
+    }
+
+    .min {
+      color: #bababa;
+    }
+  }
+
+  &.active,
+  &:hover {
+    border: 1px solid #e9e9e9;
+    background: #fcfcfc;
+  }
+}

@@ -1,1 +1,8 @@
-.className {}
+.className {
+  .weatherList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+}
