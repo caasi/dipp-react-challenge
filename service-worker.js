@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dipp-react-challenge/precache-manifest.c633b57c9bc214aaa6bf7abae46650c4.js"
+  "/dipp-react-challenge/precache-manifest.b20f0190a063c710f1c68df157ae94bb.js"
 );
 
 self.addEventListener('message', (event) => {
