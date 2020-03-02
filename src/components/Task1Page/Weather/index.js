@@ -7,7 +7,9 @@ import WeatherIcon from '../WeatherIcon';
 const Weather = React.memo(({
   id,
   className,
+  active,
   data,
+  onClick,
 }) => {
   const { dt_txt, main: { temp_min, temp_max } = {}, weather = [] } = data;
   const day = moment(dt_txt).format('ddd');
@@ -15,7 +17,10 @@ const Weather = React.memo(({
   const min_temp = Math.floor(temp_min);
 
   return (
-    <div className={cx(styles.className, className)}>
+    <div
+      className={cx(styles.className, className, { active })}
+      onClick={onClick}
+    >
       <span className={styles.day}>{day}</span>
       {weather.map(w =>
         <WeatherIcon key={w.id} className={styles.icon} {...w} />
