@@ -5,6 +5,8 @@ import styles from './index.module.scss';
 const Login = React.memo(({
   id,
   className,
+  disabled = false,
+  message = '',
   onSubmit,
 }) => {
   const [username, setUsername] = useState('');
@@ -38,7 +40,12 @@ const Login = React.memo(({
           onChange={(evt) => setPassword(evt.target.value)}
         />
       </div>
-      <button type="submit">Login</button>
+      <button disabled={disabled} type="submit">
+        Login
+      </button>
+      {message &&
+        <p className={styles.message}>{message}</p>
+      }
     </form>
   );
 });

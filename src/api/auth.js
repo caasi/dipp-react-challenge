@@ -6,10 +6,12 @@ import { delay } from '../types/time';
 // mock the database
 const users = {
   admin: {
+    username: 'admin',
     // 'password'
     password: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8',
   },
   user: {
+    username: 'user',
     // 'foobar'
     password: 'c3ab8ff13720e8ad9047dd39466b3c8974e592c2fa383d4a3960714caef0c4f2',
   },
