@@ -1,5 +1,7 @@
 ![image info](./logo.png)
 
+* preview: https://caasi.github.io/dipp-react-challenge/
+
 # About
 
 The point of this exercise is to give you the chance to show us what you know, can do and how you approach problem solving.
