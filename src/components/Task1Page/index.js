@@ -3,13 +3,15 @@ import styles from './index.module.scss';
 import constate from 'constate';
 import Login from './Login';
 import AdminPanel from './AdminPanel';
+import UserPanel from './UserPanel';
 import { usePromise } from '@hereticaljs/hooks';
 import { auth } from '../../api';
-import { useCities } from '../../hooks';
+import { useCities, useUser } from '../../hooks';
 
 const [CitiesProvider, useCitiesContext] = constate(useCities);
+const [UserProvider, useUserContext] = constate(useUser);
 
-export { useCitiesContext };
+export { useCitiesContext, useUserContext };
 
 export default function Task1Page({ id }) {
   const [pUser, setUser] = useState();
@@ -30,7 +32,13 @@ export default function Task1Page({ id }) {
           </div>
         }
         {user
-          ? <AdminPanel />
+          ? user.username === 'admin'
+            ? <AdminPanel />
+            : (
+              <UserProvider username={user.username}>
+                <UserPanel />
+              </UserProvider>
+            )
           : null
         }
       </CitiesProvider>
